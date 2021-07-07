@@ -23,7 +23,14 @@ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 */
 
 /* VARIÁVEIS */
-:root{}
+:root{
+    --fontePrincipal: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', Verdana;
+    --backgroundColor: rgb(135, 195, 192);;
+}
+
+img {
+    width: 200px;
+}
 /* VARIÁVEIS */
   
   
@@ -36,40 +43,68 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
     list-style: none;
     text-decoration: none;
 }
-/* GERAL */
-  
-/* HTML */
-html{}
-/* HTML */
-  
-/* BODY */
-body{}
-/* BODY */
-  
 
-/* HEADER */
-header{}
-/* HEADER */
-  
+header, footer{
+    background-color: var(--backgroundColor);
+    height: 50px;
+    font-family: var(--fontePrincipal);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
 
-/* FOOTER */
-footer{}
-/* FOOTER */
 
-  
 /* INICIAL */
-main{}
+
+figcaption{
+    display: none;
+}
+
+figure {
+    margin-top: 20px;
+}
+main, aside{
+    padding:15px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p, ul{
+    padding: 15px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    margin-top: 5px;
+}
+
+h2, h3{
+    text-align: center;
+}
 /* INICIAL */
   
 
 /* EXTRAS */
 
 /* para estilizar a scrollbar */
-::-webkit-scrollbar{}
+::-webkit-scrollbar{
+    width:10px;
+}
 ::-webkit-scrollbar-button{}
 ::-webkit-scrollbar-track{}
 ::-webkit-scrollbar-track-piece{}
-::-webkit-scrollbar-thumb{}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(yellow, blue, green, red, purple);
+}
 ::-webkit-scrollbar-corner{}
 ::-webkit-resizer{}
 /* EXTRAS */
@@ -78,5 +113,30 @@ main{}
 /* MEDIA QUERIES */
 @media screen and (min-width: 400px){}
 
-@media screen and (min-width: 800px){}
+@media screen and (min-width: 678px){
+    .container {
+        display: flex;
+    }
+    
+    section.left {
+        flex:1;
+    }
+
+    section.right {
+        flex:2;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .projetos {
+        column-count: 2;
+    }
+
+    .about div h2 {
+        margin-top: 20px;
+    }
+}
 /* MEDIA QUERIES */
